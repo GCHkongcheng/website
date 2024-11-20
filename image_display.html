@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>337快照</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+<body class="stackedit">
+  <div class="stackedit__html">
+    <h1>337快照</h1>
+    <img id="randomImage" src="" alt="Random Image" style="max-width: 100%; max-height: 500px;"/>
+    <!-- 添加刷新按钮 -->
+    <button onclick="refreshImage()">刷新图片</button>
+  </div>
+  <script>
+    // 页面加载时获取URL参数中的图片URL并显示图片
+    window.onload = function() {
+      refreshImage(); // 默认加载时也刷新图片
+    };
+    
+    // 刷新图片的函数
+    function refreshImage() {
+      var images = [
+    'https://pic.imgdb.cn/item/673df8bed29ded1a8c1f3192.jpg',
+    'https://pic.imgdb.cn/item/673df8b6d29ded1a8c1f2ace.jpg',
+    'https://pic.imgdb.cn/item/673df8afd29ded1a8c1f25b8.jpg',
+    'https://pic.imgdb.cn/item/673df8a0d29ded1a8c1f1a93.jpg',
+    'https://pic.imgdb.cn/item/673df880d29ded1a8c1efe61.jpg',
+    // ... 可以继续添加更多的图片URL
+];
+
+      var randomIndex = Math.floor(Math.random() * images.length);
+      var randomImageUrl = images[randomIndex];
+      document.getElementById('randomImage').src = randomImageUrl;
+    }
+  </script>
+</body>
+</html>
