@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>12</title>
   <link rel="stylesheet" href="https://stackedit.io/style.css" />
 </head>
-
 <body class="stackedit">
-  <div class="stackedit__html"><h1 id="组织">337组织</h1>
-<h2 id="njust神秘地下黑暗组织">Njust神秘地下黑暗组织</h2>
-<p>包含四名顶级玩家</p>
-<p><a href="https://github.com/337organization/">337网址</a></p>
-<p><em><strong>附带国服第一狙击手照片</strong></em></p>
-<p><img src="https://s2.loli.net/2024/11/15/UdvCy5rQpcJKOsh.jpg" alt="qxq.jpg"></p>
-</div>
-</body>
+  <div class="stackedit__html">
+    <h1 id="组织">337组织</h1>
+    <h2 id="njust神秘地下黑暗组织">Njust神秘地下黑暗组织</h2>
+    <p>包含四名顶级玩家</p>
+    <p><a href="https://github.com/337organization/">337网址</a></p>
+    <p><em><strong>附带国服第一狙击手照片</strong></em></p>
+    <p><img src="https://s2.loli.net/2024/11/15/UdvCy5rQpcJKOsh.jpg" alt="qxq.jpg"></p>
+  </div>
+  
+  <!-- 在页面底部添加小标题和按钮 -->
+  <div style="text-align: center; margin-top: 20px;">
+    <h3 id="337快照">337快照</h3>
+    <button onclick="generateImage()">获取图片</button>
+  </div>
+  
+  <script>
+    var images = [
+    'https://pic.imgdb.cn/item/673df8bed29ded1a8c1f3192.jpg',
+    'https://pic.imgdb.cn/item/673df8b6d29ded1a8c1f2ace.jpg',
+    'https://pic.imgdb.cn/item/673df8afd29ded1a8c1f25b8.jpg',
+    'https://pic.imgdb.cn/item/673df8a0d29ded1a8c1f1a93.jpg',
+    'https://pic.imgdb.cn/item/673df880d29ded1a8c1efe61.jpg',
+    // ... 可以继续添加更多的图片URL
+];
 
+
+    function generateImage() {
+      var randomIndex = Math.floor(Math.random() * images.length);
+      var randomImageUrl = images[randomIndex];
+      // 重定向到新页面，并带上随机图片的URL作为参数
+      window.location.href = 'image_display.html?imageUrl=' + encodeURIComponent(randomImageUrl);
+    }
+  </script>
+</body>
 </html>
